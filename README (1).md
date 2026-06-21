@@ -1,10 +1,10 @@
-# 🎓 Student Grade Calculator
+# Student Grade Calculator
 
 A beginner-friendly Python program built as part of **Week 2: Making Decisions & Repeating Tasks in Python**. It takes a student's name and marks, validates the input, calculates a letter grade (A–F), and displays an encouraging message based on performance.
 
 ---
 
-## 📌 Project Overview & Objectives
+## Project Overview & Objectives
 
 This project demonstrates core Python fundamentals covered in Week 2:
 - **If-elif-else statements** for decision-making (grading logic)
@@ -18,7 +18,7 @@ This project demonstrates core Python fundamentals covered in Week 2:
 
 ---
 
-## ⚙️ Setup & Installation Instructions
+## Setup & Installation Instructions
 
 ### Requirements
 - Python 3.6 or higher
@@ -39,7 +39,7 @@ This project demonstrates core Python fundamentals covered in Week 2:
 
 ---
 
-## 🧩 Code Structure Explanation
+## Code Structure Explanation
 
 The program is organized into clear, reusable **functions**, each with a single responsibility:
 
@@ -53,17 +53,17 @@ The program is organized into clear, reusable **functions**, each with a single 
 
 ### Grading Logic
 ```
-A : 90 - 100  → "Excellent! Outstanding performance! 🌟"
-B : 80 - 89   → "Very Good! Keep it up! 👍"
-C : 70 - 79   → "Good job! You can do even better! 😊"
-D : 60 - 69   → "You passed! Work a bit harder next time. 💪"
-F : 0  - 59   → "Don't give up! Practice more and you'll improve. 🙌"
+A : 90 - 100  → "Excellent! Outstanding performance!"
+B : 80 - 89   → "Very Good! Keep it up!"
+C : 70 - 79   → "Good job! You can do even better!"
+D : 60 - 69   → "You passed! Work a bit harder next time."
+F : 0  - 59   → "Don't give up! Practice more and you'll improve."
 ```
 The `calculate_grade()` function checks the marks from highest to lowest using `if marks >= 90`, `elif marks >= 80`, and so on, falling through to `else` for an F grade. This ensures every mark between 0–100 maps to exactly one grade.
 
 ---
 
-## ✅ How Technical Requirements Were Met
+## How Technical Requirements Were Met
 
 | Requirement | Where it's implemented |
 |---|---|
@@ -78,7 +78,7 @@ The `calculate_grade()` function checks the marks from highest to lowest using `
 
 ---
 
-## 🖥️ Sample Run
+## Sample Run
 
 ```
 ========================================
@@ -87,30 +87,30 @@ The `calculate_grade()` function checks the marks from highest to lowest using `
 Enter student name: Priya
 Enter marks (0-100): 85
 
-📊 RESULT FOR PRIYA:
+RESULT FOR PRIYA:
 Marks: 85/100
 Grade: B
-Message: Very Good! Keep it up! 👍
+Message: Very Good! Keep it up!
 
 Do you want to check another student? (y/n): n
 
-Thank you for using the Grade Calculator! Goodbye 👋
+Thank you for using the Grade Calculator! Goodbye
 ```
 
 ### Handling Invalid Input
 ```
 Enter marks (0-100): 150
-⚠️  Marks must be between 0 and 100. Try again.
+Marks must be between 0 and 100. Try again.
 
 Enter marks (0-100): abc
-⚠️  Invalid input! Please enter a number.
+Invalid input! Please enter a number.
 
 Enter marks (0-100): 45
 ```
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 > Screenshots of the working application should be placed in the `screenshots/` folder and referenced here, e.g.:
 >
@@ -119,7 +119,7 @@ Enter marks (0-100): 45
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 grade_calculator/
@@ -131,7 +131,7 @@ grade_calculator/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 See [`test_cases.txt`](./test_cases.txt) for 12 manually run test cases covering:
 - All five grade boundaries (A, B, C, D, F)
@@ -140,11 +140,11 @@ See [`test_cases.txt`](./test_cases.txt) for 12 manually run test cases covering
 - Multi-student loop continuation
 - Decimal mark input
 
-All 12 test cases passed. ✅
+All 12 test cases passed.
 
 ---
 
-## 🚧 Challenges Faced / Notes
+## Challenges Faced / Notes
 
 - Decided to accept **decimal marks** (e.g., 88.5) using `float()` instead of `int()`, since real-world marks are sometimes given with decimals. The displayed marks are still shown as whole numbers using formatting.
 - Used a **separate function for name validation** (`get_valid_name`) in addition to marks validation, to make the program more robust even though it wasn't explicitly required.
