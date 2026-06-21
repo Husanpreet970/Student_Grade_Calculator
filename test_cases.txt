@@ -1,0 +1,135 @@
+STUDENT GRADE CALCULATOR - TEST CASES
+=======================================
+
+These test cases were run manually against grade_calculator.py to verify
+that the grading logic, input validation, and loops all work correctly.
+
+----------------------------------------------------------------------
+TEST CASE 1: Standard valid input (matches sample output in spec)
+----------------------------------------------------------------------
+Input:
+    Name: Priya
+    Marks: 85
+
+Expected Output:
+    📊 RESULT FOR PRIYA:
+    Marks: 85/100
+    Grade: B
+    Message: Very Good! Keep it up! 👍
+
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 2: Grade boundary check - A (90-100)
+----------------------------------------------------------------------
+Input:  Amit, 95
+Expected: Grade A, "Excellent! Outstanding performance! 🌟"
+Result: PASS ✅
+
+Input:  90 (lower boundary of A)
+Expected: Grade A
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 3: Grade boundary check - B (80-89)
+----------------------------------------------------------------------
+Input:  Sara, 82
+Expected: Grade B, "Very Good! Keep it up! 👍"
+Result: PASS ✅
+
+Input:  89 (upper boundary of B)
+Expected: Grade B
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 4: Grade boundary check - C (70-79)
+----------------------------------------------------------------------
+Input:  Vikram, 75
+Expected: Grade C, "Good job! You can do even better! 😊"
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 5: Grade boundary check - D (60-69)
+----------------------------------------------------------------------
+Input:  Neha, 61
+Expected: Grade D, "You passed! Work a bit harder next time. 💪"
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 6: Grade boundary check - F (0-59)
+----------------------------------------------------------------------
+Input:  Rohan, 30
+Expected: Grade F, "Don't give up! Practice more and you'll improve. 🙌"
+Result: PASS ✅
+
+Input:  0 (lowest possible marks)
+Expected: Grade F
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 7: Invalid marks - greater than 100
+----------------------------------------------------------------------
+Input:  150
+Expected: "⚠️ Marks must be between 0 and 100. Try again." and re-prompt
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 8: Invalid marks - negative number
+----------------------------------------------------------------------
+Input:  -5
+Expected: "⚠️ Marks must be between 0 and 100. Try again." and re-prompt
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 9: Invalid marks - non-numeric text
+----------------------------------------------------------------------
+Input:  abc
+Expected: "⚠️ Invalid input! Please enter a number." and re-prompt
+          (handled using try/except, program does not crash)
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 10: Empty student name
+----------------------------------------------------------------------
+Input:  "" (just pressing Enter)
+Expected: "⚠️ Name cannot be empty. Please try again." and re-prompt
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 11: Multiple students in one run (loop continuation)
+----------------------------------------------------------------------
+Input sequence:
+    Amit / 95 / y
+    Sara / 82 / y
+    Vikram / 75 / y
+    Neha / 61 / y
+    Rohan / 30 / n
+
+Expected: Program correctly loops and displays results for all 5
+          students, then exits gracefully after "n" is entered.
+Result: PASS ✅
+
+
+----------------------------------------------------------------------
+TEST CASE 12: Decimal marks
+----------------------------------------------------------------------
+Input:  88.5
+Expected: Accepted as valid (float), Grade B
+Result: PASS ✅
+
+
+SUMMARY
+=======
+Total test cases: 12
+Passed: 12
+Failed: 0
